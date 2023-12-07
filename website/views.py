@@ -52,5 +52,5 @@ def customer_record(request, pk):
         customer_record = Record.objects.get(id=pk)
         return render(request, 'record.html', {'customer_record': customer_record})
     else:
-        messages.success(request, "You Must Be Logged To View The Records")
+        messages.success(request, "You Must Be Logged In To View This Page....")
         return redirect('home')
